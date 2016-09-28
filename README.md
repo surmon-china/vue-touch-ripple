@@ -38,7 +38,7 @@ var TouchRipple = require('vue-touch-ripple')
 Vue.use(TouchRipple)
 
 
-# use in components
+## use in components
 <touch-ripple>
    // your code...
    // link:
@@ -48,7 +48,7 @@ Vue.use(TouchRipple)
 </touch-ripple>
 
 
-# use in directive
+## use in directive
 <button v-touch-ripple>check me!<button>
 <h1 v-touch-ripple>I'm h1!<h1>
 <div v-touch-ripple>I'm div!<div>
