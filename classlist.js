@@ -73,10 +73,10 @@ function isElementObject(o) {
 }
 
 module.exports = {
-  add,
-  remove,
-  contains,
+  add: add,
+  remove: remove,
+  contains: contains,
   has: contains,
-  set,
+  set: set,
   get: classes
 };

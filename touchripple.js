@@ -6,7 +6,7 @@
 var classlist = require('./classlist')
 
 // startRipple
-var startRipple = function startRipple(eventType, event) {
+var startRipple = function(eventType, event) {
 
   // 获取事件目标元素
   var holder = event.currentTarget
@@ -82,7 +82,7 @@ var startRipple = function startRipple(eventType, event) {
 }
 
 // 鼠标按下
-var handleMouseDown = function handleMouseDown(e) {
+var handleMouseDown = function(e) {
   // Trigger on left click only
   if (e.button === 0) {
     startRipple(e.type, e)
@@ -90,7 +90,7 @@ var handleMouseDown = function handleMouseDown(e) {
 }
 
 // 触摸事件开始
-var handleTouchStart = function handleTouchStart(e) {
+var handleTouchStart = function(e) {
   if (e.changedTouches) {
     for (var i = 0; i < e.changedTouches.length; ++i) {
       startRipple(e.type, e.changedTouches[i])
@@ -99,7 +99,7 @@ var handleTouchStart = function handleTouchStart(e) {
 }
 
 module.exports = {
-  startRipple,
-  handleMouseDown,
-  handleTouchStart
+  startRipple: startRipple,
+  handleMouseDown: handleMouseDown,
+  handleTouchStart: handleTouchStart
 }
