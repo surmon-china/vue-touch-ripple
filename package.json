@@ -1,6 +1,6 @@
 {
   "name": "vue-touch-ripple",
-  "version": "1.0.6",
+  "version": "1.2.0",
   "description": "Touch ripple component for Vue.js",
   "main": "index.js",
   "scripts": {
