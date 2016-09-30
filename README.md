@@ -20,42 +20,40 @@ Touch ripple component for Vue.js
 ``` bash
 # install vue-touch-ripple
 npm install vue-touch-ripple
+```
 
-
-# Vue use
-
-## import with ES6
+``` javascript
+// import with ES6
 import Vue from 'vue'
-...
+// ...
 import TouchRipple from 'vue-touch-ripple'
 
 
-## require with Webpack
-var Vue = require('vue)
-...
+// require with Webpack/Node.js
+var Vue = require('vue')
+// ...
 var TouchRipple = require('vue-touch-ripple')
 
 
-## use
+// use
 Vue.use(TouchRipple)
+```
 
-
-## use in components
+``` html
+<!-- use with components -->
 <touch-ripple>
-   // your code...
-   // link:
+   <!-- your code... -->
    <h1>it's a h1 title</h1>
    <div>it's a div block</div>
-   ...
+   <!-- ... -->
 </touch-ripple>
 
 
-## use in directive
+<!-- use with directive -->
 <button v-touch-ripple>check me!<button>
 <h1 v-touch-ripple>I'm h1!<h1>
 <div v-touch-ripple>I'm div!<div>
-...
-
+<!-- ... -->
 ```
 
 
