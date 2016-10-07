@@ -8,17 +8,19 @@
 
 
 # Vue-Touch-Ripple
-Touch ripple component for Vue.js
+Touch ripple component for Vue.js(1.x ~ 2.x)，可用于任何非行内元素，组件component/指令directive两种方法可供使用，灵活简单，兼容Vue.js全版本
 
 
 # Example
-[Demos](https://surmon-china.github.io/vue-touch-ripple/)
+[Demo Page](https://surmon-china.github.io/vue-touch-ripple/)
 
 
 # Use Setup
 
+
+### Install vue-touch-ripple
+
 ``` bash
-# install vue-touch-ripple
 npm install vue-touch-ripple
 ```
 
@@ -37,6 +39,21 @@ var TouchRipple = require('vue-touch-ripple')
 
 // use
 Vue.use(TouchRipple)
+
+// --------------------------------------
+
+
+// or use with component(ES6)
+import Vue from 'vue'
+// ...
+import { touchRipple } from 'vue-touch-ripple'
+
+// use
+export default {
+  components: {
+    touchRipple
+  }
+}
 ```
 
 ``` html
@@ -49,10 +66,10 @@ Vue.use(TouchRipple)
 </touch-ripple>
 
 
-<!-- use with directive -->
-<button v-touch-ripple>check me!<button>
-<h1 v-touch-ripple>I'm h1!<h1>
-<div v-touch-ripple>I'm div!<div>
+<!-- use with directive(must be global Vue.use(TouchRipple)) -->
+<button v-touch-ripple>check me!</button>
+<h1 v-touch-ripple>I'm h1!</h1>
+<div v-touch-ripple>I'm div!</div>
 <!-- ... -->
 ```
 

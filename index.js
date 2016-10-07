@@ -4,8 +4,6 @@
  * Adapted from rippleJS (https://github.com/samthor/rippleJS)
  * removed jQuery
  *
- * Version 1.0.0
- *
  */
 
 var directive = require('./directive.js')
@@ -21,6 +19,7 @@ var touchRippleBuild = function(Vue) {
 }
 
 var touchRipple = {
+  touchRipple: component,
   install: function(Vue) {
     touchRippleBuild(Vue)
   }

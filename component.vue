@@ -12,6 +12,9 @@
     ready: function() {
       this.initialize()
     },
+    mounted: function() {
+      this.initialize()
+    },
     beforeDestory: function() {
       if (this.$el) {
         this.$el.removeEventListener('mousedown', touchripple.handleMouseDown)
