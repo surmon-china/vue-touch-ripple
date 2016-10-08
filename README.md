@@ -19,7 +19,6 @@ Touch ripple component for Vue.js(1.x ~ 2.x)，组件component/指令directive�
     ``` html
     <touch-ripple class="inline">
        <button>it's a button</button>
-       <button>it's abutton</button>
     </touch-ripple>
     ```
 
