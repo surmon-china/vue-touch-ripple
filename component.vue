@@ -24,8 +24,12 @@
     methods: {
       initialize: function() {
         if (this.$el) {
-          this.$el.addEventListener('mousedown', touchripple.handleMouseDown)
-          this.$el.addEventListener('touchstart', touchripple.handleTouchStart)
+          // console.log(this, this.$el.ontouchstart)
+          if (window.ontouchstart === null) {
+            this.$el.addEventListener('touchstart', touchripple.handleTouchStart)
+          } else {
+            this.$el.addEventListener('mousedown', touchripple.handleMouseDown)
+          }
         }
       }
     }

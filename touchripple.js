@@ -9,10 +9,13 @@ var classlist = require('./classlist')
 var startRipple = function(eventType, event) {
 
   // 获取事件目标元素
-  var holder = event.currentTarget
+  var holder = event.currentTarget || event.target
+
+  // console.log(holder)
 
   // 当前元素不能包含既定元素
   if (!classlist.has(holder, 'touch-ripple')) {
+    if (!holder) return
     holder = holder.querySelector('.touch-ripple')
     if (!holder) return
   }
