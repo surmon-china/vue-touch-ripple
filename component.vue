@@ -15,7 +15,7 @@
     mounted: function() {
       this.initialize()
     },
-    beforeDestory: function() {
+    beforeDestroy: function() {
       if (this.$el) {
         this.$el.removeEventListener('mousedown', touchripple.handleMouseDown)
         this.$el.removeEventListener('touchstart', touchripple.handleTouchStart)
