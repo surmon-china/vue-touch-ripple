@@ -6,23 +6,19 @@
  *
  */
 
-var directive = require('./directive.js')
-var component = require('./component.vue')
+const directive = require('./directive.js')
+const component = require('./component.vue')
 
-var touchRippleBuild = function(Vue) {
-
-  // component
-  Vue.component('touch-ripple', component)
-
-  // directive
-  Vue.directive('touch-ripple', directive)
-}
-
-var touchRipple = {
+const vueTouchRipple = {
   touchRipple: component,
-  install: function(Vue) {
-    touchRippleBuild(Vue)
+  install(Vue) {
+
+    // component
+    Vue.component('touch-ripple', component)
+
+    // directive
+    Vue.directive('touch-ripple', directive)
   }
 }
 
-module.exports = touchRipple
+module.exports = vueTouchRipple

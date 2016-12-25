@@ -10,6 +10,9 @@
 # Vue-Touch-Ripple
 Touch ripple component for Vue.js(1.x ~ 2.x)，组件component/指令directive两种方法可供使用，灵活简单，兼容Vue.js全版本。
 
+> ### v2.3.0
+> 取消了touchstart事件，防止移动端move事件的冲突
+
 - 要注意的地方：
 
   * 使用directive模式时，组件会给所对应元素内部append子节点，如果是p、tr、img、Input...这些标签由于浏览器不支持再内嵌元素，故将会失效，所以刚才所述的单标签或者一些特殊的不允许内部插入元素的行内元素，在使用时需使用component方式
@@ -47,25 +50,21 @@ npm install vue-touch-ripple
 ``` javascript
 // import with ES6
 import Vue from 'vue'
-// ...
-import TouchRipple from 'vue-touch-ripple'
+import VueTouchRipple from 'vue-touch-ripple'
 
 
 // require with Webpack/Node.js
-var Vue = require('vue')
-// ...
-var TouchRipple = require('vue-touch-ripple')
+const Vue = require('vue')
+const VueTouchRipple = require('vue-touch-ripple')
 
 
 // use
-Vue.use(TouchRipple)
+Vue.use(VueTouchRipple)
 
 // --------------------------------------
 
-
 // or use with component(ES6)
 import Vue from 'vue'
-// ...
 import { touchRipple } from 'vue-touch-ripple'
 
 // use
@@ -86,7 +85,7 @@ export default {
 </touch-ripple>
 
 
-<!-- use with directive(must be global Vue.use(TouchRipple)) -->
+<!-- use with directive(must be global Vue.use(VueTouchRipple)) -->
 <button v-touch-ripple>check me!</button>
 <h1 v-touch-ripple>I'm h1!</h1>
 <div v-touch-ripple>I'm div!</div>

@@ -1,12 +1,12 @@
 /**
  * Vue-touch-ripple
  * Adapted from rippleJS (https://github.com/samthor/rippleJS)
- */ 
+ */
 
-var classlist = require('./classlist')
+const classlist = require('./classlist')
 
 // startRipple
-var startRipple = function(eventType, event) {
+const startRipple = function(eventType, event) {
 
   // 获取事件目标元素
   var holder = event.currentTarget || event.target
@@ -85,7 +85,7 @@ var startRipple = function(eventType, event) {
 }
 
 // 鼠标按下
-var handleMouseDown = function(e) {
+const handleMouseDown = function(e) {
   // Trigger on left click only
   if (e.button === 0) {
     startRipple(e.type, e)
@@ -93,16 +93,17 @@ var handleMouseDown = function(e) {
 }
 
 // 触摸事件开始
-var handleTouchStart = function(e) {
-  if (e.changedTouches) {
-    for (var i = 0; i < e.changedTouches.length; ++i) {
-      startRipple(e.type, e.changedTouches[i])
-    }
+const handleTouchStart = function(e) {
+  let touchs = e.changedTouches;
+  if (touchs) {
+    touchs.forEach(t => {
+      startRipple(e.type, t)
+    });
   }
 }
 
 module.exports = {
-  startRipple: startRipple,
-  handleMouseDown: handleMouseDown,
-  handleTouchStart: handleTouchStart
+  startRipple,
+  handleMouseDown,
+  handleTouchStart
 }

@@ -6,30 +6,33 @@
 </template>
 
 <script>
-  var touchripple = require('./touchripple')
+  const touchripple = require('./touchripple')
   export default {
     name: 'touch-ripple',
-    ready: function() {
+    ready() {
       this.initialize()
     },
-    mounted: function() {
+    mounted() {
       this.initialize()
     },
-    beforeDestroy: function() {
+    beforeDestroy() {
       if (this.$el) {
         this.$el.removeEventListener('mousedown', touchripple.handleMouseDown)
-        this.$el.removeEventListener('touchstart', touchripple.handleTouchStart)
+        // this.$el.removeEventListener('touchstart', touchripple.handleTouchStart)
       }
     },
     methods: {
-      initialize: function() {
+      initialize() {
         if (this.$el) {
           // console.log(this, this.$el.ontouchstart)
+          this.$el.addEventListener('mousedown', touchripple.handleMouseDown)
+          /*
           if (window.ontouchstart === null) {
             this.$el.addEventListener('touchstart', touchripple.handleTouchStart)
           } else {
             this.$el.addEventListener('mousedown', touchripple.handleMouseDown)
           }
+          */
         }
       }
     }
