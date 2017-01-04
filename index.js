@@ -11,7 +11,7 @@ const component = require('./component.vue')
 
 const vueTouchRipple = {
   touchRipple: component,
-  install(Vue) {
+  install: function(Vue) {
 
     // component
     Vue.component('touch-ripple', component)

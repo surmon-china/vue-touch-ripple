@@ -94,7 +94,7 @@ const handleMouseDown = function(e) {
 
 // 触摸事件开始
 const handleTouchStart = function(e) {
-  let touchs = e.changedTouches;
+  var touchs = e.changedTouches;
   if (touchs) {
     touchs.forEach(t => {
       startRipple(e.type, t)
