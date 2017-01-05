@@ -9,8 +9,8 @@ const GetCurrentStyle = function(obj, attr) {
 }
 
 const directive = {
-  bind(el) {
-    let element = this ? (this.el ? this.el : el) : el
+  bind : function (el) {
+    var element = this ? (this.el ? this.el : el) : el
     // console.log(element)
     if (element) {
       let ripple = document.createElement('div')
@@ -21,11 +21,11 @@ const directive = {
       element.addEventListener('mousedown', touchripple.handleMouseDown)
     }
   },
-  update(value) {
+  update : function (value) {
     // console.log(value)
   },
-  unbind(el) {
-    let element = this ? (this.el ? this.el : el) : el
+  unbind : function (el) {
+    var element = this ? (this.el ? this.el : el) : el
     if (element) {
       element.removeEventListener('mousedown', touchripple.handleMouseDown)
       // element.removeEventListener('touchstart', touchripple.handleTouchStart)
