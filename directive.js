@@ -13,7 +13,7 @@ const directive = {
     var element = this ? (this.el ? this.el : el) : el
     // console.log(element)
     if (element) {
-      let ripple = document.createElement('div')
+      var ripple = document.createElement('div')
       ripple.className = 'touch-ripple'
       element.appendChild(ripple)
       element.style.position = 'relative'
