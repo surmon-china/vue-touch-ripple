@@ -103,7 +103,7 @@ const handleTouchStart = function(e) {
 }
 
 module.exports = {
-  startRipple : startRipple,
-  handleMouseDown : handleMouseDown,
-  handleTouchStart : handleTouchStart
+  startRipple: startRipple,
+  handleMouseDown: handleMouseDown,
+  handleTouchStart: handleTouchStart
 }
