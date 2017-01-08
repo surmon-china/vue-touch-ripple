@@ -96,14 +96,14 @@ const handleMouseDown = function(e) {
 const handleTouchStart = function(e) {
   var touchs = e.changedTouches;
   if (touchs) {
-    touchs.forEach(t => {
+    touchs.forEach(function (t) {
       startRipple(e.type, t)
     });
   }
 }
 
 module.exports = {
-  startRipple,
-  handleMouseDown,
-  handleTouchStart
+  startRipple: startRipple,
+  handleMouseDown: handleMouseDown,
+  handleTouchStart: handleTouchStart
 }
