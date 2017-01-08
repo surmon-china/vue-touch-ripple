@@ -10,8 +10,8 @@
 # Vue-Touch-Ripple
 Touch ripple component for Vue.js(1.x ~ 2.x)，组件component/指令directive两种方法可供使用，灵活简单，兼容Vue.js全版本。
 
-> ### v2.3.1
-> 修复打包时错误（然而并未验证）
+> ### v2.3.2
+> 修复打包时错误
 
 > ### v2.3.0
 > 取消了touchstart事件，防止移动端move事件的冲突

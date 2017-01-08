@@ -9,7 +9,7 @@ const GetCurrentStyle = function(obj, attr) {
 }
 
 const directive = {
-  bind : function (el) {
+  bind: function (el) {
     var element = this ? (this.el ? this.el : el) : el
     // console.log(element)
     if (element) {
@@ -21,10 +21,10 @@ const directive = {
       element.addEventListener('mousedown', touchripple.handleMouseDown)
     }
   },
-  update : function (value) {
+  update: function (value) {
     // console.log(value)
   },
-  unbind : function (el) {
+  unbind: function (el) {
     var element = this ? (this.el ? this.el : el) : el
     if (element) {
       element.removeEventListener('mousedown', touchripple.handleMouseDown)
