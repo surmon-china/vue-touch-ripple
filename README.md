@@ -61,11 +61,11 @@ const Vue = require('vue')
 const VueTouchRipple = require('vue-touch-ripple')
 
 
-// global mount
+// mount with global
 Vue.use(VueTouchRipple)
 
 
-// mount with
+// or mount with compoment
 import Vue from 'vue'
 import { touchRipple } from 'vue-touch-ripple'
 
@@ -82,7 +82,6 @@ export default {
    <!-- your code... -->
    <h1>it's a h1 title</h1>
    <div>it's a div block</div>
-   <!-- ... -->
 </touch-ripple>
 
 
@@ -90,7 +89,6 @@ export default {
 <button v-touch-ripple>check me!</button>
 <h1 v-touch-ripple>I'm h1!</h1>
 <div v-touch-ripple>I'm div!</div>
-<!-- ... -->
 ```
 
 
