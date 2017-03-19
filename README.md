@@ -47,27 +47,28 @@ Touch ripple component for Vue.js(1.x ~ 2.x).
 npm install vue-touch-ripple
 ```
 
+
+### Mount with vue
+
 ``` javascript
-// import with ES6
+// import
 import Vue from 'vue'
 import VueTouchRipple from 'vue-touch-ripple'
 
 
-// require with Webpack/Node.js
+// or require
 const Vue = require('vue')
 const VueTouchRipple = require('vue-touch-ripple')
 
 
-// use
+// global mount
 Vue.use(VueTouchRipple)
 
-// --------------------------------------
 
-// or use with component(ES6)
+// mount with
 import Vue from 'vue'
 import { touchRipple } from 'vue-touch-ripple'
 
-// use
 export default {
   components: {
     touchRipple
@@ -94,4 +95,4 @@ export default {
 
 
 # Author Blog
-[Surmon](http://surmon.me)
+[Surmon](https://surmon.me)
