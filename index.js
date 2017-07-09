@@ -8,16 +8,17 @@
 
 const directive = require('./directive.js')
 const component = require('./component.vue')
+component = component.default || component
 
 const vueTouchRipple = {
   touchRipple: component,
   install: function(Vue) {
 
     // component
-    Vue.component('touch-ripple', component)
+    Vue.component(component.name, component)
 
     // directive
-    Vue.directive('touch-ripple', directive)
+    Vue.directive(component.name, directive)
   }
 }
 
