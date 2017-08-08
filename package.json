@@ -1,10 +1,11 @@
 {
   "name": "vue-touch-ripple",
-  "version": "2.3.8",
+  "version": "2.4.0",
   "description": "Touch ripple component for Vue.js(1.x ~ 2.x)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production browserify -t vueify -e index.js -x vue -s VueTouchRipple -o dist/vue-touch-ripple.js -d && uglifyjs dist/vue-touch-ripple.js --source-map -o dist/vue-touch-ripple.min.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,15 @@
     "name": "Surmon",
     "email": "surmon@foxmail.com",
     "url": "http://surmon.me"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browserify": "^14.4.0",
+    "cross-env": "^5.0.0",
+    "uglify-js": "^3.0.15",
+    "vueify": "^8.7.0"
   },
   "license": "MIT",
   "bugs": {

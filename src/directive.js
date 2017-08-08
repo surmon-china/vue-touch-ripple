@@ -1,6 +1,6 @@
-const touchripple = require('./touchripple')
+var touchripple = require('./touchripple')
 
-const GetCurrentStyle = function(obj, attr) {
+var GetCurrentStyle = function(obj, attr) {
   if (obj.currentStyle) {
     return obj.currentStyle[attr]
   } else {
@@ -8,7 +8,7 @@ const GetCurrentStyle = function(obj, attr) {
   }
 }
 
-const directive = {
+var directive = {
   bind: function (el) {
     var element = this ? (this.el ? this.el : el) : el
     // console.log(element)

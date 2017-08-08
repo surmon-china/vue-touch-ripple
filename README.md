@@ -16,9 +16,9 @@ Touch ripple component for Vue.js(1.x ~ 2.x).
 
 - 要注意的地方：
 
-  * 使用directive模式时，组件会给所对应元素内部append子节点，如果是p、tr、img、Input...这些标签由于浏览器不支持再内嵌元素，故将会失效，所以刚才所述的单标签或者一些特殊的不允许内部插入元素的行内元素，在使用时需使用component方式
+  * 使用`directive`模式时，组件会给所对应元素内部`append`子节点，如果是`p、tr、img、Input...`这些标签由于浏览器不支持再内嵌元素，故将会失效，所以刚才所述的单标签或者一些特殊的不允许内部插入元素的行内元素，在使用时需使用`component`方式
 
-  * 使用component模式时，组件会在外层自动包裹div，div默认是block的，且本质上已经改变了外层dom结构，如果需要的话，可以通过给组件加class来用css改变其成为指定的盒子类型，如：
+  * 使用`component`模式时，组件会在外层自动包裹`div`，`div`默认是`block`的，且本质上已经改变了外层`dom`结构，如果需要的话，可以通过给组件加`class`来用`css`改变其成为指定的盒子类型，如：
 
     ``` html
     <touch-ripple class="inline">
@@ -48,6 +48,16 @@ Touch ripple component for Vue.js(1.x ~ 2.x).
 npm install vue-touch-ripple
 ```
 
+### Mount with browser
+
+```html
+<!-- 现在支持 runtime 使用了 -->
+<link rel="stylesheet" href="../../../component.css">
+<script src="../../xxxx/dist/vue-touch-ripple.min.js"></script>
+<script>
+  Vue.use(window.VueTouchRipple)
+</script>
+```
 
 ### Mount with vue
 

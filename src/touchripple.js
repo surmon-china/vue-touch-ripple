@@ -3,10 +3,10 @@
  * Adapted from rippleJS (https://github.com/samthor/rippleJS)
  */
 
-const classlist = require('./classlist')
+var classlist = require('./classlist')
 
 // startRipple
-const startRipple = function(eventType, event) {
+var startRipple = function(eventType, event) {
 
   // 获取事件目标元素
   var holder = event.currentTarget || event.target
@@ -85,7 +85,7 @@ const startRipple = function(eventType, event) {
 }
 
 // 鼠标按下
-const handleMouseDown = function(e) {
+var handleMouseDown = function(e) {
   // Trigger on left click only
   if (e.button === 0) {
     startRipple(e.type, e)
@@ -93,7 +93,7 @@ const handleMouseDown = function(e) {
 }
 
 // 触摸事件开始
-const handleTouchStart = function(e) {
+var handleTouchStart = function(e) {
   var touchs = e.changedTouches;
   if (touchs) {
     touchs.forEach(function (t) {

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  const touchripple = require('./touchripple')
+  var touchripple = require('./touchripple')
   export default {
     name: 'touch-ripple',
     ready() {

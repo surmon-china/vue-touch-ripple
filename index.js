@@ -6,12 +6,11 @@
  *
  */
 
-var directive = require('./directive.js')
-var component = require('./component.vue')
-
+var directive = require('./src/directive.js')
+var component = require('./src/component.vue')
 component = component.default || component
 
-const vueTouchRipple = {
+var vueTouchRipple = {
   touchRipple: component,
   install: function(Vue) {
 
