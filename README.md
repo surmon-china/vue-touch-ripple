@@ -52,6 +52,10 @@ npm install vue-touch-ripple
 ### Mount with vue
 
 ``` javascript
+// 从现在开始你需要手动引入css了
+require('vue-touch-ripple/component.css')
+
+
 // import
 import Vue from 'vue'
 import VueTouchRipple from 'vue-touch-ripple'
