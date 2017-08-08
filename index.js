@@ -8,6 +8,7 @@
 
 var directive = require('./directive.js')
 var component = require('./component.vue')
+
 component = component.default || component
 
 const vueTouchRipple = {
