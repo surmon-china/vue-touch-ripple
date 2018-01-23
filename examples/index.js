@@ -1,5 +1,5 @@
-import example01 from './01-example.vue'
+import example from './example.vue'
 
-module.exports = {
-  example01
+export default {
+  example
 }

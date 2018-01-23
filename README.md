@@ -1,88 +1,74 @@
+[![GitHub stars](https://img.shields.io/github/stars/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple/stargazers)
+[![Build Status](https://travis-ci.org/surmon-china/vue-touch-ripple.svg?branch=master)](https://travis-ci.org/surmon-china/vue-touch-ripple)
 [![GitHub issues](https://img.shields.io/github/issues/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple/issues)
 [![GitHub forks](https://img.shields.io/github/forks/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple/network)
-[![GitHub stars](https://img.shields.io/github/stars/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/surmon-china/vue-touch-ripple/master/LICENSE)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/surmon-china/vue-touch-ripple.svg?style=social?style=flat-square)](https://twitter.com/intent/tweet?url=https://github.com/surmon-china/vue-touch-ripple)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://twitter.com/intent/tweet?url=https://github.com/surmon-china/vue-touch-ripple)
 
 [![NPM](https://nodei.co/npm/vue-touch-ripple.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-touch-ripple/)
 [![NPM](https://nodei.co/npm-dl/vue-touch-ripple.png?months=9&height=3)](https://nodei.co/npm/vue-touch-ripple/)
 
 
 # Vue-Touch-Ripple
-Touch ripple component for Vue.js(1.x ~ 2.x).
-
-组件component/指令directive两种方法可供使用，灵活简单，兼容Vue.js全版本。
-
-
-- 要注意的地方：
-
-  * 使用`directive`模式时，组件会给所对应元素内部`append`子节点，如果是`p、tr、img、Input...`这些标签由于浏览器不支持再内嵌元素，故将会失效，所以刚才所述的单标签或者一些特殊的不允许内部插入元素的行内元素，在使用时需使用`component`方式
-
-  * 使用`component`模式时，组件会在外层自动包裹`div`，`div`默认是`block`的，且本质上已经改变了外层`dom`结构，如果需要的话，可以通过给组件加`class`来用`css`改变其成为指定的盒子类型，如：
-
-    ``` html
-    <touch-ripple class="inline">
-       <button>it's a button</button>
-    </touch-ripple>
-    ```
-
-    ``` css
-    .inline {
-      display: inline-block;
-    }
-    ```
-
-  * 推荐directive模式使用，在directive模式失效时，改用component模式
+Touch ripple component for Vue.
 
 
 # Example
+
 [Demo Page](https://surmon-china.github.io/vue-touch-ripple/)
 
+[CDN Example](https://jsfiddle.net/bL983fjt/)
 
-# Use Setup
 
+# Install
 
-### Install vue-touch-ripple
+#### CDN
 
-``` bash
-npm install vue-touch-ripple
-```
-
-### Mount with browser
-
-```html
-<!-- 现在支持 runtime 使用了 -->
-<link rel="stylesheet" href="../../../component.css">
-<script src="../../xxxx/dist/vue-touch-ripple.min.js"></script>
-<script>
+``` html
+<script type="text/javascript" src="path/to/vue.min.js"></script>
+<script type="text/javascript" src="path/to/dist/vue-touch-ripple.js"></script>
+<link rel="stylesheet" href="path/to/dist/vue-touch-ripple.css"/>
+<script type="text/javascript">
   Vue.use(window.VueTouchRipple)
 </script>
 ```
 
-### Mount with vue
+#### NPM
+
+``` bash
+npm install vue-touch-ripple --save
+```
+
+### Mount
+
+#### mount with global
 
 ``` javascript
-// 从现在开始你需要手动引入css了
-require('vue-touch-ripple/component.css')
-
-
-// import
 import Vue from 'vue'
 import VueTouchRipple from 'vue-touch-ripple'
 
-
-// or require
-const Vue = require('vue')
-const VueTouchRipple = require('vue-touch-ripple')
-
+// import styles
+import 'vue-touch-ripple/src/component.css'
 
 // mount with global
-Vue.use(VueTouchRipple)
+Vue.use(VueTouchRipple, /* {
+  // default global options
+  color: '#fff',
+  opacity: 0.3,
+  speed: 1,
+  transition: 'ease'
+  } */)
+```
 
+#### mount with component
 
-// or mount with compoment
+```javascript
 import Vue from 'vue'
 import { touchRipple } from 'vue-touch-ripple'
+
+// import styles
+import 'vue-touch-ripple/src/component.css'
 
 export default {
   components: {
@@ -91,21 +77,32 @@ export default {
 }
 ```
 
-``` html
-<!-- use with components -->
-<touch-ripple>
-   <!-- your code... -->
-   <h1>it's a h1 title</h1>
-   <div>it's a div block</div>
-</touch-ripple>
 
+### Component
 
-<!-- use with directive(must be global Vue.use(VueTouchRipple)) -->
-<button v-touch-ripple>check me!</button>
-<h1 v-touch-ripple>I'm h1!</h1>
-<div v-touch-ripple>I'm div!</div>
+```vue
+<!-- The ref attr used to find the swiper instance -->
+<template>
+  <touch-ripple :speed="1" :opacity="0.3" color="#fff" transition="ease">
+     <!-- your element... -->
+     <h1>it's a h1 title</h1>
+     <div>it's a div block</div>
+  </touch-ripple>
+</template>
 ```
 
 
-# Author Blog
+# OPTIONS
+
+| prop       | type     |default |
+| :--------  | :----- | :---- |
+| speed      | `Number` | `1`    |
+| color      | `String` | `#fff` |
+| opacity    | `Number` | `0.3`  |
+| transition | `String` | `ease-out` |
+
+
+# Author
 [Surmon](https://surmon.me)
+
+
