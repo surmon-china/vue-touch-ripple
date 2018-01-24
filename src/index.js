@@ -16,6 +16,4 @@ export const install = function (Vue, options) {
   Vue.component(compoment.name, compoment)
 }
 
-export const vueTouchRipple = { touchRipple, install }
-
-export default vueTouchRipple
+export default { touchRipple, install }
