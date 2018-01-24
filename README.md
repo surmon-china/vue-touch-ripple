@@ -30,7 +30,7 @@ Touch ripple component for Vue.
 <script type="text/javascript" src="path/to/dist/vue-touch-ripple.js"></script>
 <link rel="stylesheet" href="path/to/dist/vue-touch-ripple.css"/>
 <script type="text/javascript">
-  Vue.use(window.VueTouchRipple)
+  Vue.use(window.VueTouchRipple, /* { default global options } */)
 </script>
 ```
 
@@ -49,7 +49,7 @@ import Vue from 'vue'
 import VueTouchRipple from 'vue-touch-ripple'
 
 // import styles
-import 'vue-touch-ripple/src/component.css'
+import 'vue-touch-ripple/dist/vue-touch-ripple.css'
 
 // mount with global
 Vue.use(VueTouchRipple, /* {
@@ -58,17 +58,16 @@ Vue.use(VueTouchRipple, /* {
   opacity: 0.3,
   speed: 1,
   transition: 'ease'
-  } */)
+} */)
 ```
 
 #### mount with component
 
 ```javascript
-import Vue from 'vue'
 import { touchRipple } from 'vue-touch-ripple'
 
 // import styles
-import 'vue-touch-ripple/src/component.css'
+import 'vue-touch-ripple/dist/vue-touch-ripple.css'
 
 export default {
   components: {
@@ -81,7 +80,6 @@ export default {
 ### Component
 
 ```vue
-<!-- The ref attr used to find the swiper instance -->
 <template>
   <touch-ripple :speed="1" :opacity="0.3" color="#fff" transition="ease">
      <!-- your element... -->
@@ -92,7 +90,7 @@ export default {
 ```
 
 
-# OPTIONS
+# Options
 
 | prop       | type     |default |
 | :--------  | :----- | :---- |

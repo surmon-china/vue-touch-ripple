@@ -1,12 +1,9 @@
 
 const path = require('path')
 const webpack = require('webpack')
+const utils = require('./utils')
 
 const resolve = dir => path.join(__dirname, '..', dir)
-
-const env = process.env.NODE_ENV === 'testing'
-  ? { NODE_ENV: '"testing"' }
-  : { NODE_ENV: '"production"' }
 
 module.exports = {
   module: {
@@ -23,7 +20,17 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {}
+        options: {
+          loaders: utils.cssLoaders({
+            sourceMap: false,
+            extract: true
+          }),
+          postcss: [
+            require('autoprefixer')({
+              browsers: ['last 2 versions']
+            })
+          ]
+        }
       },
       {
         test: /\.js$/,
@@ -33,9 +40,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': env
-    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false }
     })

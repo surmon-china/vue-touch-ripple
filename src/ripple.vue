@@ -1,5 +1,5 @@
 <template>
-  <div class="touch-ripple" 
+  <div class="v-touch-ripple" 
        @mousedown="mousedown" 
        @mouseup="mouseup"
        ref="inner">
@@ -143,8 +143,8 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .touch-ripple {
+<style lang="scss">
+  .v-touch-ripple {
     position: relative;
     display: inline-block;
 
