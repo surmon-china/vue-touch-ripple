@@ -18,7 +18,7 @@ Touch ripple component for Vue.
 
 [Demo Page](https://surmon-china.github.io/vue-touch-ripple/)
 
-[CDN Example](https://jsfiddle.net/bL983fjt/)
+[CDN Example](https://jsfiddle.net/wqLobwd1/)
 
 
 # Install
