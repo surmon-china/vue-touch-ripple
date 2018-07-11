@@ -12,7 +12,6 @@
           transform: null,
           rippleing: null
         },
-        rippleing: false,
         baseSpeed: 0.5,
         coreStyle: {
           transform: 'scale(0)'
@@ -58,9 +57,6 @@
       startRipple() {
         this.$nextTick(() => {
 
-          // 内部状态
-          this.rippleing = true
-
           // 开始涟漪
           this.timers.transform = setTimeout(() => {
             this.coreStyle.transform = 'scale(1)'
@@ -68,7 +64,6 @@
 
           // 结束涟漪
           this.timers.rippleing = setTimeout(() => {
-            this.rippleing = false
             this.$emit('end', this.id)
           }, this.computeSpeed * 1000)
         })
