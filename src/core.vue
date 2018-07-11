@@ -10,7 +10,7 @@
       return {
         timers: {
           transform: null,
-          rippleing: null
+          rippling: null
         },
         baseSpeed: 0.5,
         coreStyle: {
@@ -29,9 +29,9 @@
         clearTimeout(this.timers.transform)
         this.timers.transform = null
       }
-      if (this.timers.rippleing) {
-        clearTimeout(this.timers.rippleing)
-        this.timers.rippleing = null
+      if (this.timers.rippling) {
+        clearTimeout(this.timers.rippling)
+        this.timers.rippling = null
       }
     },
     computed: {
@@ -63,7 +63,7 @@
           }, 0)
 
           // 结束涟漪
-          this.timers.rippleing = setTimeout(() => {
+          this.timers.rippling = setTimeout(() => {
             this.$emit('end', this.id)
           }, this.computeSpeed * 1000)
         })
