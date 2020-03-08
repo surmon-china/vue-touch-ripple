@@ -1,25 +1,31 @@
 <template>
-  <div class="v-touch-ripple" 
-       @mousedown="mousedown" 
-       @mouseup="mouseup"
-       ref="inner">
+  <div
+    class="v-touch-ripple"
+    @mousedown="mousedown"
+    @mouseup="mouseup"
+    ref="inner"
+  >
     <slot></slot>
     <div class="touch-ripple" v-show="showRipple">
-        <transition-group tag="div" 
-                          class="ripple-inner" 
-                          name="ripple" 
-                          @enter="rippleEnter"
-                          @after-leave="rippleLeave">
-          <ripple-core :key="ripple.id"
-                       :id="ripple.id"
-                       :color="color || options.color"
-                       :speed="speed || options.speed"
-                       :opacity="opacity || options.opacity"
-                       :transition="transition || options.transition"
-                       :styles="ripple.styles"
-                       @end="handleRippleEnd"
-                       v-for="ripple in ripples"></ripple-core>
-        </transition-group>
+      <transition-group
+        tag="div"
+        class="ripple-inner"
+        name="ripple"
+        @enter="rippleEnter"
+        @after-leave="rippleLeave"
+      >
+        <ripple-core
+          :key="ripple.id"
+          :id="ripple.id"
+          :color="color || options.color"
+          :speed="speed || options.speed"
+          :opacity="opacity || options.opacity"
+          :transition="transition || options.transition"
+          :styles="ripple.styles"
+          @end="handleRippleEnd"
+          v-for="ripple in ripples"
+        />
+      </transition-group>
     </div>
   </div>
 </template>

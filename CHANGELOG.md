@@ -2,5 +2,4 @@
 ## CHANGELOG
 
 ### v3.0.0
-
-update webpack config and rebuild.
+- Update webpack config and rebuild.

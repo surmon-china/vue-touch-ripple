@@ -1,10 +1,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple/stargazers)
-[![Build Status](https://travis-ci.org/surmon-china/vue-touch-ripple.svg?branch=master)](https://travis-ci.org/surmon-china/vue-touch-ripple)
 [![GitHub issues](https://img.shields.io/github/issues/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple/issues)
 [![GitHub forks](https://img.shields.io/github/forks/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple/network)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/surmon-china/vue-touch-ripple)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/surmon-china/vue-touch-ripple.svg?style=flat-square)](https://twitter.com/intent/tweet?url=https://github.com/surmon-china/vue-touch-ripple)
 
 [![NPM](https://nodei.co/npm/vue-touch-ripple.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-touch-ripple/)
 [![NPM](https://nodei.co/npm-dl/vue-touch-ripple.png?months=9&height=3)](https://nodei.co/npm/vue-touch-ripple/)
@@ -14,14 +12,14 @@
 Touch ripple component for Vue.
 
 
-# Example
+### Example
 
-[Demo Page](https://surmon-china.github.io/vue-touch-ripple/)
+[Demo Page](https://github.surmon.me/vue-touch-ripple)
 
-[CDN Example](https://jsfiddle.net/wqLobwd1/)
+[CDN Example](https://jsfiddle.net/wqLobwd1)
 
 
-# Install
+### Install
 
 #### CDN
 
@@ -76,7 +74,6 @@ export default {
 }
 ```
 
-
 ### Component
 
 ```vue
@@ -89,8 +86,7 @@ export default {
 </template>
 ```
 
-
-# Options
+### Options
 
 | prop       | type     |default |
 | :--------  | :----- | :---- |
@@ -98,9 +94,3 @@ export default {
 | color      | `String` | `#fff` |
 | opacity    | `Number` | `0.3`  |
 | transition | `String` | `ease-out` |
-
-
-# Author
-[Surmon](https://surmon.me)
-
-
