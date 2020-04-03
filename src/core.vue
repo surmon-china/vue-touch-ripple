@@ -2,7 +2,9 @@
   <div class="ripple-core" :style="computeCoreStyle"></div>
 </template>
 
-<script>
+<script lang="ts">
+  import vue, { ref, onMounted } from 'vue'
+  console.log('onMounted', vue)
   export default {
     name: 'touch-ripple-core',
     props: ['id', 'color', 'opacity', 'speed', 'styles', 'transition'],
