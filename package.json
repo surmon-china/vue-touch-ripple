@@ -1,6 +1,6 @@
 {
   "name": "vue-touch-ripple",
-  "version": "4.0.0",
+  "version": "3.0.0",
   "description": "Touch ripple component for Vue",
   "keywords": [
     "vue touch ripple",
@@ -45,12 +45,12 @@
     "release": ". ./scripts/release.sh"
   },
   "peerDependencies": {
-    "vue": "3.x"
+    "vue": "2.x"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "typescript": "^3.8.3",
-    "vue": "^3.0.0-alpha.10"
+    "vue": "^2.6.11"
   }
 }

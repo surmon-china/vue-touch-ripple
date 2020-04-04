@@ -1,19 +1,30 @@
+/**
+ * @file vue-touch-ripple
+ * @module exporter
+ * @author Surmon <https://github.com/surmon-china>
+ */
 
-/*
-* vue-touch-ripple
-* Author: surmon@foxmail.com
-* Github: https://github.com/surmon-china/vue-touch-ripple
-*/
+import _Vue, { PluginFunction } from 'vue'
+import compoment from './ripple'
 
-import compoment from './ripple.vue'
+const COMPONENT_NAME = 'TouchRipple'
 
-export const touchRipple = compoment
-
-export const install = function (Vue, options) {
-  if (options) {
-    compoment.props.globalOptions.default = () => options
-  }
-  Vue.component(compoment.name, compoment)
+interface InstallFunction extends PluginFunction<any> {
+  installed?: boolean
 }
 
-export default { touchRipple, install }
+const install: InstallFunction = (Vue: typeof _Vue, globalOptions?: SwiperOptions) => {
+  if (install.installed) return
+
+  if (globalOptions) {
+    (compoment as any).options.props.defaultOptions.default = () => globalOptions
+  }
+  Vue.component(COMPONENT_NAME, compoment)
+  install.installed = true
+}
+
+export default {
+  install,
+  version: 'PACKAGE_VERSION',
+  [COMPONENT_NAME]: compoment
+}
