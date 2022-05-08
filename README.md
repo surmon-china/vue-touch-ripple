@@ -91,7 +91,7 @@ app.use(VueTouchRipple, {
 | prop           | description                                                                                                            | type      | default    |
 | :------------- | :--------------------------------------------------------------------------------------------------------------------- | :-------- | :--------- |
 | color          | Specify the background color of the ripple layer, supporting any legal color value such as RGBA.                       | `String`  | `#fff`     |
-| opacity        | Transparency of corrugated layers, supporting numbers from `0` ~ `1`.                                                  | `Number`  | `0.3`      |
+| opacity        | Transparency of ripple layers, supporting numbers from `0` ~ `1`.                                                      | `Number`  | `0.3`      |
 | duration       | Duration of single ripple motion, time in milliseconds.                                                                | `Number`  | `380`      |
 | transition     | Ripple motion animation curve with Bezier curve value support.                                                         | `String`  | `ease-out` |
 | keepLastRipple | whether to keep the last ripple (if `true`, the last ripple will always be present until the mouse button is released) | `Boolean` | `true`     |
