@@ -40,12 +40,12 @@ npm install vue-touch-ripple --save
     transition="ease-out"
     :duration="400"
     :keep-last-ripple="true"
-    @touch="handleTouch"
-    @click="handleClick"
-    @start="handleRippleStart"
-    @end="handleRippleEnd"
+    @touch="log('touch', $event)"
+    @click="log('click', $event)"
+    @start="log('ripple-start', $event)"
+    @end="log('ripple-end', $event)"
   >
-    <!-- your content -->
+    <!-- your content element -->
     <div class="content">Target content</div>
   </touch-ripple>
 </template>
@@ -58,7 +58,9 @@ npm install vue-touch-ripple --save
   export default {
     components: {
       TouchRipple
-    }
+    },
+    methods: {
+      log: console.log
   }
 </script>
 ```
@@ -73,6 +75,7 @@ import VueTouchRipple from 'vue-touch-ripple'
 import 'vue-touch-ripple/css'
 
 const app = createApp()
+
 app.use(VueTouchRipple, {
   // optional default global options
   color: 'red',
