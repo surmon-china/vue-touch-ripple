@@ -12,14 +12,6 @@ import {
 import { DEFAULT_CONFIG, useGlobalConfig } from './config'
 import RippleCore from './core'
 
-const filterObject = <T = any>(target: any): T => {
-  const result: any = {}
-  Object.keys(target)
-    .filter((key) => target[key] !== undefined)
-    .forEach((key) => (result[key] = target[key]))
-  return result
-}
-
 const props = {
   color: String,
   opacity: Number,
@@ -40,10 +32,16 @@ export default defineComponent({
   },
   setup(props, context) {
     const config = computed(() => {
-      return {
+      const defaultConfig = {
         ...DEFAULT_CONFIG,
-        ...useGlobalConfig(),
-        ...filterObject(toRaw(props))
+        ...useGlobalConfig()
+      }
+      return {
+        color: props.color ?? defaultConfig.color,
+        opacity: props.opacity ?? defaultConfig.opacity,
+        duration: props.duration ?? defaultConfig.duration,
+        transition: props.transition ?? defaultConfig.transition,
+        keepLastRipple: props.keepLastRipple ?? defaultConfig.keepLastRipple
       } as Required<Props>
     })
 
