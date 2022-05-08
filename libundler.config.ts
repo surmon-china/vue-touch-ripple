@@ -8,6 +8,7 @@ export default defineConfig({
   targets: ['esm', 'umd'],
   external: ['vue'],
   exports: 'named',
+  sourcemap: false,
   globals: {
     vue: 'Vue'
   }
