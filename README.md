@@ -69,8 +69,6 @@ npm install vue-touch-ripple --save
 
 ```javascript
 import { createApp } from 'vue'
-
-// import component & style
 import VueTouchRipple from 'vue-touch-ripple'
 import 'vue-touch-ripple/css'
 
