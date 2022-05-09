@@ -53,7 +53,7 @@ npm install vue-touch-ripple --save
 <script>
   // import component & style
   import { TouchRipple } from 'vue-touch-ripple'
-  import 'vue-touch-ripple/css'
+  import 'vue-touch-ripple/style.css'
 
   export default {
     components: {
@@ -70,7 +70,7 @@ npm install vue-touch-ripple --save
 ```javascript
 import { createApp } from 'vue'
 import VueTouchRipple from 'vue-touch-ripple'
-import 'vue-touch-ripple/css'
+import 'vue-touch-ripple/style.css'
 
 const app = createApp()
 

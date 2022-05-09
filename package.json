@@ -1,6 +1,6 @@
 {
   "name": "vue-touch-ripple",
-  "version": "4.0.0-rc.3",
+  "version": "4.0.0-rc.4",
   "description": "Touch ripple component for Vue",
   "keywords": [
     "vue touch ripple",
@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.surmon.me/vue-touch-ripple",
   "files": [
-    "dist"
+    "dist",
+    "style.css"
   ],
   "sideEffects": false,
   "types": "./dist/vue-touch-ripple.esm.d.ts",
@@ -29,8 +30,10 @@
       "import": "./dist/vue-touch-ripple.esm.js",
       "require": "./dist/vue-touch-ripple.umd.js"
     },
-    "./css": "./dist/vue-touch-ripple.esm.css",
-    "./types": "./dist/vue-touch-ripple.esm.d.ts"
+    "./style.css": "./style.css",
+    "./types": "./dist/vue-touch-ripple.esm.d.ts",
+    "./dist/vue-touch-ripple.esm.css": "./dist/vue-touch-ripple.esm.css",
+    "./package.json": "./package.json"
   },
   "scripts": {
     "dev": "vite",
@@ -38,6 +41,7 @@
     "test": "vitest run --coverage",
     "lint": "eslint --ext .js,.ts,.vue src test",
     "rebirth": "npm run lint && npm run test && npm run build",
+    "restyle": "cp \"./dist/vue-touch-ripple.esm.css\" \"./style.css\"",
     "release": ". ./scripts/release.sh"
   },
   "peerDependencies": {
