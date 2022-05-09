@@ -6,7 +6,6 @@ import {
   onBeforeUnmount,
   TransitionGroup,
   h,
-  toRaw,
   ExtractPropTypes
 } from 'vue'
 import { DEFAULT_CONFIG, useGlobalConfig } from './config'
@@ -17,7 +16,11 @@ const props = {
   opacity: Number,
   duration: Number,
   transition: String,
-  keepLastRipple: Boolean
+  keepLastRipple: {
+    type: Boolean,
+    // HACK: for Vue prop Boolean type default value
+    default: undefined
+  }
 }
 
 export type Props = ExtractPropTypes<typeof props>
