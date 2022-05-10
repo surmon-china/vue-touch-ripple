@@ -9,11 +9,11 @@
   ],
   "license": "MIT",
   "author": "Surmon",
+  "homepage": "https://github.surmon.me/vue-touch-ripple",
   "repository": {
     "type": "git",
     "url": "https://github.com/surmon-china/vue-touch-ripple.git"
   },
-  "homepage": "https://github.surmon.me/vue-touch-ripple",
   "files": [
     "dist",
     "style.css"
