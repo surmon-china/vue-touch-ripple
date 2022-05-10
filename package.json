@@ -13,9 +13,6 @@
     "type": "git",
     "url": "https://github.com/surmon-china/vue-touch-ripple.git"
   },
-  "bugs": {
-    "url": "https://github.com/surmon-china/vue-touch-ripple/issues"
-  },
   "homepage": "https://github.surmon.me/vue-touch-ripple",
   "files": [
     "dist",
@@ -31,9 +28,8 @@
       "require": "./dist/vue-touch-ripple.umd.js"
     },
     "./css": "./style.css",
-    "./style": "./style.css",
-    "./style.css": "./style.css",
     "./types": "./dist/vue-touch-ripple.esm.d.ts",
+    "./style.css": "./style.css",
     "./dist/vue-touch-ripple.esm.css": "./dist/vue-touch-ripple.esm.css",
     "./package.json": "./package.json"
   },
