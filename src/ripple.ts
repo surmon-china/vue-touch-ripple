@@ -34,11 +34,12 @@ export default defineComponent({
     end: (id: number) => true
   },
   setup(props, context) {
+    const defaultConfig = {
+      ...DEFAULT_CONFIG,
+      ...useGlobalConfig()
+    }
+
     const config = computed(() => {
-      const defaultConfig = {
-        ...DEFAULT_CONFIG,
-        ...useGlobalConfig()
-      }
       return {
         color: props.color ?? defaultConfig.color,
         opacity: props.opacity ?? defaultConfig.opacity,
