@@ -8,7 +8,7 @@ import {
   h,
   ExtractPropTypes
 } from 'vue'
-import { DEFAULT_CONFIG, useGlobalConfig } from './config'
+import { useGlobalConfig } from './config'
 import RippleCore from './core'
 
 const props = {
@@ -24,6 +24,14 @@ const props = {
 }
 
 export type Props = ExtractPropTypes<typeof props>
+export const DEFAULT_CONFIG: Readonly<Required<Props>> = Object.freeze({
+  color: '#fff',
+  opacity: 0.3,
+  duration: 380,
+  transition: 'ease-out',
+  keepLastRipple: true
+})
+
 export default defineComponent({
   name: 'Ripple',
   props,
