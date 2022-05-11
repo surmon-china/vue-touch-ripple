@@ -12,9 +12,12 @@
 
 Touch ripple component for Vue(3).
 
-- [**Examples (Vue3)**](https://github.surmon.me/vue-touch-ripple)
-- [**Examples (Vue2)**](https://v1.github.surmon.me/vue-touch-ripple)
-- [**vue-touch-ripple@3.0.0 (Vue2)**](https://github.com/surmon-china/vue-touch-ripple/tree/v3.0.0)
+- [Examples (Vue3)](https://github.surmon.me/vue-touch-ripple)
+
+Legacy version
+
+- [Examples (Vue2)](https://v1.github.surmon.me/vue-touch-ripple)
+- [vue-touch-ripple@3.0.0 (Vue2)](https://github.com/surmon-china/vue-touch-ripple/tree/v3.0.0)
 
 ---
 
