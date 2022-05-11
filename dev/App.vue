@@ -77,9 +77,8 @@
       @start="consoleLog('start', $event)"
       @end="consoleLog('end', $event)"
     >
-      <div class="target">
-        <pre>{{ JSON.stringify(state, null, 2) }}</pre>
-      </div>
+      <pre>{{ JSON.stringify(state, null, 2) }}</pre>
+      <span>12213</span>
     </touch-ripple>
   </div>
 </template>
@@ -110,19 +109,11 @@
       height: 20rem;
       background-color: #fc2e5a;
       clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-
-      .target {
-        width: 100%;
-        height: 100%;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.1em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        user-select: none;
-      }
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
     }
   }
 </style>

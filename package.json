@@ -1,6 +1,6 @@
 {
   "name": "vue-touch-ripple",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Touch ripple component for Vue",
   "keywords": [
     "vue touch ripple",
@@ -27,8 +27,8 @@
       "import": "./dist/vue-touch-ripple.esm.js",
       "require": "./dist/vue-touch-ripple.umd.js"
     },
+    "./dist/*": "./dist/*",
     "./css": "./style.css",
-    "./types": "./dist/vue-touch-ripple.esm.d.ts",
     "./style.css": "./style.css",
     "./dist/vue-touch-ripple.esm.css": "./dist/vue-touch-ripple.esm.css",
     "./package.json": "./package.json"
