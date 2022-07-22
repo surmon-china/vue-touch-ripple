@@ -1,7 +1,7 @@
 import { TransitionGroup } from 'vue'
 import { test, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { DEFAULT_CONFIG } from '../src/ripple'
+import { DEFAULT_CONFIG } from '../src/config'
 import VueTouchRipple, { TouchRipple, install } from '../src/index'
 
 // https://test-utils.vuejs.org/api
@@ -27,7 +27,7 @@ test('mount component', async () => {
   await wrapper.trigger('mousedown')
   expect(tgWrapper.element.children.length).toBe(2)
 
-  const [firstChild, secondChild] = tgWrapper.findAllComponents({ name: 'RippleCore' })
+  const [firstChild, secondChild] = tgWrapper.findAllComponents({ name: 'RippleItem' })
   expect(firstChild.props().id).toBe(1)
   expect(firstChild.props().color).toBe(DEFAULT_CONFIG.color)
   expect(firstChild.props().opacity).toBe(DEFAULT_CONFIG.opacity)
