@@ -10,14 +10,10 @@
 &nbsp;
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](/LICENSE)
 
-Touch ripple component for Vue(3).
+Make any element easily have a Material Design-style [click "ink ripple" effect](https://material-components.github.io/material-components-web-catalog/#/component/ripple).
 
-[**Examples site**](https://github.surmon.me/vue-touch-ripple)
-
-**Vue2 version**
-
-- [vue-touch-ripple@3.x](https://github.com/surmon-china/vue-touch-ripple/tree/v3.0.0)
-- [examples](https://v1.github.surmon.me/vue-touch-ripple)
+- [examples](https://github.surmon.me/vue-touch-ripple)
+- [legacy version](https://github.com/surmon-china/vue-touch-ripple/tree/v3.0.0) (Vue2)
 
 ---
 
@@ -54,7 +50,6 @@ npm install vue-touch-ripple --save
 </template>
 
 <script>
-  // import component & style
   import { TouchRipple } from 'vue-touch-ripple'
   import 'vue-touch-ripple/style.css'
 
