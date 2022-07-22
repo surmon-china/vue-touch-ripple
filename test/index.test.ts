@@ -1,5 +1,5 @@
 import { TransitionGroup } from 'vue'
-import { test, expect, vi } from 'vitest'
+import { test, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { DEFAULT_CONFIG } from '../src/config'
 import VueTouchRipple, { TouchRipple, install } from '../src/index'
