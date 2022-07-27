@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+### v4.1.1 (2022-07-27)
+
+fix: global component name
+
 ### v4.1.0 (2022-07-23)
 
 - feat: refactoring component.

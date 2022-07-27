@@ -4,7 +4,7 @@ import { props, events, EventKey, Props } from './interface'
 import RippleItem from './ripple'
 
 export default defineComponent({
-  name: 'Ripple',
+  name: 'VueTouchRipple',
   props: { ...props },
   emits: { ...events },
   setup(props, context) {

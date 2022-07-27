@@ -11,6 +11,7 @@ export { DEFAULT_CONFIG } from './config'
 export const TouchRipple = Component
 export const install: Plugin = (app, defaultConfig?: Props) => {
   app.component(Component.name, Component)
+  app.component('TouchRipple', Component)
   injectGlobalConfig(app, defaultConfig)
 }
 
