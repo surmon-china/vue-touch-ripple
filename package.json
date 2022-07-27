@@ -2,13 +2,13 @@
   "name": "vue-touch-ripple",
   "version": "4.1.1",
   "description": "Touch ripple component for Vue",
+  "author": "Surmon",
   "keywords": [
     "vue touch ripple",
     "vue ripple",
     "vue touch"
   ],
   "license": "MIT",
-  "author": "Surmon",
   "homepage": "https://github.surmon.me/vue-touch-ripple",
   "repository": {
     "type": "git",
