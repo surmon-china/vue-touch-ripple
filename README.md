@@ -12,8 +12,8 @@
 
 Make any element easily have a Material Design-style [click "ink ripple" effect](https://material-components.github.io/material-components-web-catalog/#/component/ripple).
 
-- [examples](https://github.surmon.me/vue-touch-ripple)
-- [legacy version](https://github.com/surmon-china/vue-touch-ripple/tree/v3.0.0) (Vue2)
+- [Examples](https://github.surmon.me/vue-touch-ripple)
+- [Legacy version](https://github.com/surmon-china/vue-touch-ripple/tree/v3.0.0) (Vue2)
 
 ---
 
