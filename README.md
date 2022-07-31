@@ -29,7 +29,7 @@ yarn add vue-touch-ripple
 npm install vue-touch-ripple --save
 ```
 
-#### local component
+#### Local component
 
 ```vue
 <template>
@@ -65,7 +65,7 @@ npm install vue-touch-ripple --save
 </script>
 ```
 
-#### global component
+#### Global component
 
 ```javascript
 import { createApp } from 'vue'
