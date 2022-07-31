@@ -50,16 +50,18 @@ npm install vue-touch-ripple --save
 </template>
 
 <script>
+  import { defineComponent } from 'vue'
   import { TouchRipple } from 'vue-touch-ripple'
   import 'vue-touch-ripple/style.css'
 
-  export default {
+  export default defineComponent({
     components: {
       TouchRipple
     },
     methods: {
       log: console.log
-  }
+    }
+  })
 </script>
 ```
 
