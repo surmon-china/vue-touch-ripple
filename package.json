@@ -15,6 +15,7 @@
     "url": "https://github.com/surmon-china/vue-touch-ripple.git"
   },
   "files": [
+    "CHANGELOG.md",
     "dist",
     "style.css"
   ],
